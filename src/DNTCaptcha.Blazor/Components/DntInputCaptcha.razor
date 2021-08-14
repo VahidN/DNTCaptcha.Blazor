@@ -1,0 +1,17 @@
+@namespace DNTCaptcha.Blazor
+
+<div style="font-family: '@FontName';" class="@CaptchaDivClass">
+	<canvas
+	   	id="@ElementId"
+        @attributes="@AdditionalAttributes"
+        @ref="@ReferenceToCanvas"
+        class="@CaptchaCanvasClass"
+		height="0" width="0"></canvas>
+	@if(ShowRefreshButton)
+	{
+		<a class="@RefreshButtonClass"
+			title="@RefreshButtonTitle"
+			style="cursor: pointer;"
+			@onclick="@(()=>ShowCaptchaAsync())"></a>
+	}
+</div>
