@@ -44,17 +44,17 @@
                     <span class="bi-shield-lock" role="img" aria-label="SecurityNumber"></span>
                 </div>
                 <InputText name="SecurityNumber" class="form-control"
-						placeholder="Security code as a number"
+			placeholder="Security code as a number"
                         autocapitalize="off" autocorrect="off" autocomplete="off"
                         @bind-Value="Model.EnteredCaptchaText1" />
                 <DntInputCaptcha @bind-Value="Model.CaptchaText1"
                         Language = "@NumberToWordLanguage.English"
                         DisplayMode = "@DisplayMode.NumberToWord"
-						AllowThousandsSeparators = "false"
+			AllowThousandsSeparators = "false"
                         Max = "900"
                         Min = "1"
-						AbsoluteExpiration = "@TimeSpan.FromMinutes(2)"
-						ShowRefreshButton = "true"
+			AbsoluteExpiration = "@TimeSpan.FromMinutes(2)"
+			ShowRefreshButton = "true"
                         FontSize = "21"
                         FontName = "Times New Roman"
                         FontColor = "#603F83FF"
@@ -62,7 +62,7 @@
                         RandomLinesCount = "2"
                         RandomCirclesCount = "6"
                         BorderWidth = "0.3"
-						BorderColor = "grey"
+			BorderColor = "grey"
                         NoisePointsCount = "25"
                         Padding = "11"
                         ShadowBlur = "7"
@@ -71,9 +71,9 @@
                         ShadowOffsetY = "-3"
                         TimerInterval = "@TimeSpan.FromMilliseconds(2500)"
                         CaptchaCanvasClass = ""
-						CaptchaDivClass = "d-flex justify-content-center align-self-center ms-1"
+			CaptchaDivClass = "d-flex justify-content-center align-self-center ms-1"
                         RefreshButtonClass = "bi-arrow-repeat btn-lg"
-						RefreshButtonTitle = "Refresh"
+			RefreshButtonTitle = "Refresh"
                     />
             </div>
             <ValidationMessage For="@(() => Model.EnteredCaptchaText1)" />
@@ -88,17 +88,17 @@
                     <span class="bi-shield-lock" role="img" aria-label="SecurityNumber"></span>
                 </div>
                 <InputText name="SecurityNumber" class="form-control"
-						placeholder="Security code as a number"
+			placeholder="Security code as a number"
                         autocapitalize="off" autocorrect="off" autocomplete="off"
                         @bind-Value="Model.EnteredCaptchaText2" />
                 <DntInputCaptcha @bind-Value="Model.CaptchaText2"
                         Language = "@NumberToWordLanguage.English"
                         DisplayMode = "@DisplayMode.ShowDigits"
-						AllowThousandsSeparators = "false"
+			AllowThousandsSeparators = "false"
                         Max = "900"
                         Min = "1"
-						AbsoluteExpiration = "@TimeSpan.FromMinutes(2)"
-						ShowRefreshButton = "true"
+			AbsoluteExpiration = "@TimeSpan.FromMinutes(2)"
+			ShowRefreshButton = "true"
                         FontSize = "21"
                         FontName = "Times New Roman"
                         FontColor = "#603F83FF"
@@ -115,9 +115,9 @@
                         ShadowOffsetY = "-3"
                         TimerInterval = "@TimeSpan.FromMilliseconds(2500)"
                         CaptchaCanvasClass = ""
-						CaptchaDivClass = "d-flex justify-content-center align-self-center ms-1"
+			CaptchaDivClass = "d-flex justify-content-center align-self-center ms-1"
                         RefreshButtonClass = "bi-arrow-repeat btn-lg"
-						RefreshButtonTitle = "Refresh"
+			RefreshButtonTitle = "Refresh"
                     />
             </div>
             <ValidationMessage For="@(() => Model.EnteredCaptchaText2)" />
@@ -132,17 +132,17 @@
                     <span class="bi-shield-lock" role="img" aria-label="SecurityNumber"></span>
                 </div>
                 <InputText name="SecurityNumber" class="form-control"
-						placeholder="Security code as a number"
+			placeholder="Security code as a number"
                         autocapitalize="off" autocorrect="off" autocomplete="off"
                         @bind-Value="Model.EnteredCaptchaText3" />
                 <DntInputCaptcha @bind-Value="Model.CaptchaText3"
                         Language = "@NumberToWordLanguage.English"
                         DisplayMode = "@DisplayMode.SumOfTwoNumbers"
-						AllowThousandsSeparators = "false"
+			AllowThousandsSeparators = "false"
                         Max = "20"
                         Min = "1"
-						AbsoluteExpiration = "@TimeSpan.FromMinutes(2)"
-						ShowRefreshButton = "true"
+			AbsoluteExpiration = "@TimeSpan.FromMinutes(2)"
+			ShowRefreshButton = "true"
                         FontSize = "21"
                         FontName = "Times New Roman"
                         FontColor = "#603F83FF"
@@ -159,9 +159,9 @@
                         ShadowOffsetY = "-3"
                         TimerInterval = "@TimeSpan.FromMilliseconds(2500)"
                         CaptchaCanvasClass = ""
-						CaptchaDivClass = "d-flex justify-content-center align-self-center ms-1"
+			CaptchaDivClass = "d-flex justify-content-center align-self-center ms-1"
                         RefreshButtonClass = "bi-arrow-repeat btn-lg"
-						RefreshButtonTitle = "Refresh"
+			RefreshButtonTitle = "Refresh"
                     />
             </div>
             <ValidationMessage For="@(() => Model.EnteredCaptchaText3)" />
@@ -176,17 +176,17 @@
                     <span class="bi-shield-lock" role="img" aria-label="SecurityNumber"></span>
                 </div>
                 <InputText name="SecurityNumber" class="form-control"
-						placeholder="Security code as a number"
+			placeholder="Security code as a number"
                         autocapitalize="off" autocorrect="off" autocomplete="off"
                         @bind-Value="Model.EnteredCaptchaText4" />
                 <DntInputCaptcha @bind-Value="Model.CaptchaText4"
                         Language = "@NumberToWordLanguage.English"
                         DisplayMode = "@DisplayMode.SumOfTwoNumbersToWords"
-						AllowThousandsSeparators = "false"
+			AllowThousandsSeparators = "false"
                         Max = "20"
                         Min = "1"
-						AbsoluteExpiration = "@TimeSpan.FromMinutes(2)"
-						ShowRefreshButton = "true"
+			AbsoluteExpiration = "@TimeSpan.FromMinutes(2)"
+			ShowRefreshButton = "true"
                         FontSize = "21"
                         FontName = "Times New Roman"
                         FontColor = "#603F83FF"
@@ -203,9 +203,9 @@
                         ShadowOffsetY = "-3"
                         TimerInterval = "@TimeSpan.FromMilliseconds(2500)"
                         CaptchaCanvasClass = ""
-						CaptchaDivClass = "d-flex justify-content-center align-self-center ms-1"
+			CaptchaDivClass = "d-flex justify-content-center align-self-center ms-1"
                         RefreshButtonClass = "bi-arrow-repeat btn-lg"
-						RefreshButtonTitle = "Refresh"
+			RefreshButtonTitle = "Refresh"
                     />
             </div>
             <ValidationMessage For="@(() => Model.EnteredCaptchaText4)" />
