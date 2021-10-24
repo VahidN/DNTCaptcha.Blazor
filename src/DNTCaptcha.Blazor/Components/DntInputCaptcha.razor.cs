@@ -288,7 +288,7 @@ namespace DNTCaptcha.Blazor
             _timer.Start();
         }
 
-        private void NotifyTimerElapsed(object source, ElapsedEventArgs e)
+        private void NotifyTimerElapsed(object? source, ElapsedEventArgs e)
         {
             _ = InvokeAsync(async () => await ShowCaptchaAsync());
         }
@@ -338,6 +338,7 @@ namespace DNTCaptcha.Blazor
                 await _scriptModule.DisposeAsync();
                 _scriptModule = null;
             }
+			GC.SuppressFinalize(this);
         }
     }
 }
