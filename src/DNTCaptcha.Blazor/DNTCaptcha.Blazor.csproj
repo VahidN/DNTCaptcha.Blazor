@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFrameworks>net6.0;net5.0;</TargetFrameworks>
     <Description>A captcha component for the Blazor apps</Description>
-    <VersionPrefix>1.1.0</VersionPrefix>
+    <VersionPrefix>1.1.1</VersionPrefix>
     <Authors>Vahid Nasiri</Authors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>DNTCaptcha.Blazor</AssemblyName>
@@ -38,14 +38,14 @@
     <Deterministic>true</Deterministic>
     <Features>strict</Features>
     <ReportAnalyzer>true</ReportAnalyzer>
-    <NoWarn>NU5118;NU5104;</NoWarn>
+    <NoWarn>NU5104;</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Meziantou.Analyzer" Version="1.0.673">
+    <PackageReference Include="Meziantou.Analyzer" Version="1.0.675">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.0.63">
+    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.0.64">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -64,7 +64,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.3.5">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -88,7 +88,7 @@
     <DefineConstants>NET5_0</DefineConstants>
   </PropertyGroup>
   <ItemGroup Condition="('$(TargetFramework)' == 'net6.0')">
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[6.0.0-rc.2.21480.10,)" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[6.0.0,)" />
   </ItemGroup>
   <PropertyGroup Condition="('$(TargetFramework)' == 'net6.0')">
     <DefineConstants>NET6_0</DefineConstants>
