@@ -205,6 +205,11 @@ namespace DNTCaptcha.Blazor
         /// Its default value is true.
         /// </summary>
         [Parameter] public bool ShowRefreshButton { set; get; } = true;
+	
+	/// <summary>
+	/// Child content rendered inside the button
+	/// </summary>
+    	[Parameter] public RenderFragment RefreshButtonChildContent { get; set; }
 
         /// <summary>
         /// Represents an instance of a JavaScript runtime to which calls may be dispatched.
