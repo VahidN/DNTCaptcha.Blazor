@@ -36,19 +36,7 @@ public partial class DntInputCaptcha : ComponentBase, IDisposable, IAsyncDisposa
     public string Value
     {
         get => _value;
-        set
-        {
-            if (string.Equals(_value, value, StringComparison.Ordinal))
-            {
-                return;
-            }
-
-            _value = value;
-            if (ValueChanged.HasDelegate)
-            {
-                _ = ValueChanged.InvokeAsync(value);
-            }
-        }
+        set => SetValue(value);
     }
 
     /// <summary>
@@ -156,7 +144,7 @@ public partial class DntInputCaptcha : ComponentBase, IDisposable, IAsyncDisposa
     public int ShadowOffsetY { set; get; } = -3;
 
     /// <summary>
-    ///     The timer's interval in ms to display the captcha's text at diffent locations.
+    ///     The timer's interval in ms to display the captcha's text at different locations.
     ///     Its default value is `2500 ms`.
     /// </summary>
     [Parameter]
@@ -164,7 +152,7 @@ public partial class DntInputCaptcha : ComponentBase, IDisposable, IAsyncDisposa
 
     /// <summary>
     ///     Gets or sets an absolute expiration date for the cache entry.
-    ///     After that the captcha will be recalulated.
+    ///     After that the captcha will be recalculated.
     ///     Its default value is 2 minutes.
     /// </summary>
     [Parameter]
@@ -262,7 +250,21 @@ public partial class DntInputCaptcha : ComponentBase, IDisposable, IAsyncDisposa
         GC.SuppressFinalize(this);
     }
 
-    internal ValueTask ShowCaptchaAsync()
+    private void SetValue(string value)
+    {
+        if (string.Equals(_value, value, StringComparison.Ordinal))
+        {
+            return;
+        }
+
+        _value = value;
+        if (ValueChanged.HasDelegate)
+        {
+            _ = ValueChanged.InvokeAsync(value);
+        }
+    }
+
+    private ValueTask ShowCaptchaAsync()
     {
         if (_scriptModule is null)
         {
@@ -271,7 +273,7 @@ public partial class DntInputCaptcha : ComponentBase, IDisposable, IAsyncDisposa
 
         var (text, randomNumber) =
             CaptchaTextFactory.GetData(Min, Max, AllowThousandsSeparators, Language, DisplayMode);
-        Value = randomNumber.ToString(CultureInfo.InvariantCulture);
+        SetValue(randomNumber.ToString(CultureInfo.InvariantCulture));
 
         return _scriptModule.InvokeVoidAsync("drawDntCaptcha",
                                              ReferenceToCanvas,
@@ -318,10 +320,7 @@ public partial class DntInputCaptcha : ComponentBase, IDisposable, IAsyncDisposa
             throw new InvalidOperationException($"{nameof(JSRuntime)} is null.");
         }
 
-        if (_scriptModule is null)
-        {
-            _scriptModule = await JSRuntime.InvokeAsync<IJSObjectReference>("import", ScriptPath);
-        }
+        _scriptModule ??= await JSRuntime.InvokeAsync<IJSObjectReference>("import", ScriptPath);
     }
 
     /// <summary>
