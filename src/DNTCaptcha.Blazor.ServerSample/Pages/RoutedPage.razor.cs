@@ -6,6 +6,6 @@ using Microsoft.AspNetCore.Components;
 
 namespace DNTCaptcha.Blazor.ServerSample.Pages;
 
-public partial class Index : ComponentBase
+public partial class RoutedPage : ComponentBase
 {
 }
