@@ -28,7 +28,7 @@ After installing the DNTCaptcha.Blazor package, add the following definition to 
 @using DNTCaptcha.Blazor
 ```
 
-Then to use it, add its new tag and settings to [your view](src/DNTCaptcha.Blazor.WasmSample/Client/Pages/Index.razor).
+Then to use it, add its new tag and settings to [your view](src/DNTCaptcha.Blazor.WasmSample/Client/Pages/Components/Login.razor).
 Here you will need [two properties](src/DNTCaptcha.Blazor.WasmSample/Shared/ViewModels/LoginViewModel.cs) and one `Compare` attribute to work with it:
 
 ```csharp

@@ -1,0 +1,207 @@
+<EditForm class="container" Model="Model" OnValidSubmit="DoLoginAsync">
+<DataAnnotationsValidator/>
+
+<div class="row mb-3">
+    <label class="col-form-label col-lg-3" for="Name">User Name</label>
+    <div class="col-lg-9">
+        <div class="input-group">
+            <div class="input-group-text">
+                <span class="bi-person-circle" role="img" aria-label="Name"></span>
+            </div>
+            <InputText name="Name" class="form-control"
+                       autocapitalize="off" autocorrect="off" autocomplete="UserName"
+                       @bind-Value="Model.UserName"/>
+        </div>
+        <ValidationMessage For="@(() => Model.UserName)"/>
+    </div>
+</div>
+
+<div class="row mb-3">
+    <label class="col-form-label col-lg-3" for="Password">Password</label>
+    <div class="col-lg-9">
+        <div class="input-group">
+            <div class="input-group-text">
+                <span class="bi-key" role="img" aria-label="Password"></span>
+            </div>
+            <InputText name="Password" class="form-control" type="password"
+                       autocapitalize="off" autocorrect="off" autocomplete="CurrentPassword"
+                       @bind-Value="Model.Password"/>
+        </div>
+        <ValidationMessage For="@(() => Model.Password)"/>
+    </div>
+</div>
+
+<div class="row mb-3">
+    <label class="col-form-label col-lg-3" for="SecurityNumber">Security Number (NumberToWord)</label>
+    <div class="col-lg-9">
+        <div class="input-group">
+            <div class="input-group-text">
+                <span class="bi-shield-lock" role="img" aria-label="SecurityNumber"></span>
+            </div>
+            <InputText name="SecurityNumber" class="form-control"
+                       placeholder="Security code as a number"
+                       autocapitalize="off" autocorrect="off" autocomplete="off"
+                       @bind-Value="Model.EnteredCaptchaText1"/>
+            <DntInputCaptcha @bind-Value="Model.CaptchaText1"
+                             Language="@NumberToWordLanguage.English"
+                             DisplayMode="@DisplayMode.NumberToWord"
+                             AllowThousandsSeparators="false"
+                             Max="900"
+                             Min="1"
+                             AbsoluteExpiration="@TimeSpan.FromMinutes(2)"
+                             ShowRefreshButton="true"
+                             FontSize="21"
+                             FontName="Times New Roman"
+                             FontColor="#603F83FF"
+                             BackgroundColor="#FCF6F5FF"
+                             RandomLinesCount="2"
+                             RandomCirclesCount="6"
+                             BorderWidth="0.3"
+                             BorderColor="grey"
+                             NoisePointsCount="25"
+                             Padding="11"
+                             ShadowBlur="7"
+                             ShadowColor="navy"
+                             ShadowOffsetX="-3"
+                             ShadowOffsetY="-3"
+                             TimerInterval="@TimeSpan.FromMilliseconds(2500)"
+                             CaptchaCanvasClass=""
+                             CaptchaDivClass="d-flex justify-content-center align-self-center ms-1"
+                             RefreshButtonClass="bi-arrow-repeat btn-lg"
+                             RefreshButtonTitle="Refresh"/>
+        </div>
+        <ValidationMessage For="@(() => Model.EnteredCaptchaText1)"/>
+    </div>
+</div>
+
+<div class="row mb-3">
+    <label class="col-form-label col-lg-3" for="SecurityNumber">Security Number (ShowDigits)</label>
+    <div class="col-lg-9">
+        <div class="input-group">
+            <div class="input-group-text">
+                <span class="bi-shield-lock" role="img" aria-label="SecurityNumber"></span>
+            </div>
+            <InputText name="SecurityNumber" class="form-control"
+                       placeholder="Security code as a number"
+                       autocapitalize="off" autocorrect="off" autocomplete="off"
+                       @bind-Value="Model.EnteredCaptchaText2"/>
+            <DntInputCaptcha @bind-Value="Model.CaptchaText2"
+                             Language="@NumberToWordLanguage.English"
+                             DisplayMode="@DisplayMode.ShowDigits"
+                             AllowThousandsSeparators="false"
+                             Max="900"
+                             Min="1"
+                             AbsoluteExpiration="@TimeSpan.FromMinutes(2)"
+                             ShowRefreshButton="true"
+                             FontSize="21"
+                             FontName="Times New Roman"
+                             FontColor="#603F83FF"
+                             BackgroundColor="#FCF6F5FF"
+                             RandomLinesCount="2"
+                             RandomCirclesCount="6"
+                             BorderWidth="0.3"
+                             BorderColor="grey"
+                             NoisePointsCount="25"
+                             Padding="11"
+                             ShadowBlur="7"
+                             ShadowColor="navy"
+                             ShadowOffsetX="-3"
+                             ShadowOffsetY="-3"
+                             TimerInterval="@TimeSpan.FromMilliseconds(2500)"
+                             CaptchaCanvasClass=""
+                             CaptchaDivClass="d-flex justify-content-center align-self-center ms-1"
+                             RefreshButtonClass="bi-arrow-repeat btn-lg"
+                             RefreshButtonTitle="Refresh"/>
+        </div>
+        <ValidationMessage For="@(() => Model.EnteredCaptchaText2)"/>
+    </div>
+</div>
+
+<div class="row mb-3">
+    <label class="col-form-label col-lg-3" for="SecurityNumber">Security Number (SumOfTwoNumbers)</label>
+    <div class="col-lg-9">
+        <div class="input-group">
+            <div class="input-group-text">
+                <span class="bi-shield-lock" role="img" aria-label="SecurityNumber"></span>
+            </div>
+            <InputText name="SecurityNumber" class="form-control"
+                       placeholder="Security code as a number"
+                       autocapitalize="off" autocorrect="off" autocomplete="off"
+                       @bind-Value="Model.EnteredCaptchaText3"/>
+            <DntInputCaptcha @bind-Value="Model.CaptchaText3"
+                             Language="@NumberToWordLanguage.English"
+                             DisplayMode="@DisplayMode.SumOfTwoNumbers"
+                             AllowThousandsSeparators="false"
+                             Max="20"
+                             Min="1"
+                             AbsoluteExpiration="@TimeSpan.FromMinutes(2)"
+                             ShowRefreshButton="true"
+                             FontSize="21"
+                             FontName="Times New Roman"
+                             FontColor="#603F83FF"
+                             BackgroundColor="#FCF6F5FF"
+                             RandomLinesCount="2"
+                             RandomCirclesCount="6"
+                             BorderWidth="0.3"
+                             BorderColor="grey"
+                             NoisePointsCount="25"
+                             Padding="11"
+                             ShadowBlur="7"
+                             ShadowColor="navy"
+                             ShadowOffsetX="-3"
+                             ShadowOffsetY="-3"
+                             TimerInterval="@TimeSpan.FromMilliseconds(2500)"
+                             CaptchaCanvasClass=""
+                             CaptchaDivClass="d-flex justify-content-center align-self-center ms-1"
+                             RefreshButtonClass="bi-arrow-repeat btn-lg"
+                             RefreshButtonTitle="Refresh"/>
+        </div>
+        <ValidationMessage For="@(() => Model.EnteredCaptchaText3)"/>
+    </div>
+</div>
+
+<div class="row mb-3">
+    <label class="col-form-label col-lg-3" for="SecurityNumber">Security Number (SumOfTwoNumbersToWords)</label>
+    <div class="col-lg-9">
+        <div class="input-group">
+            <div class="input-group-text">
+                <span class="bi-shield-lock" role="img" aria-label="SecurityNumber"></span>
+            </div>
+            <InputText name="SecurityNumber" class="form-control"
+                       placeholder="Security code as a number"
+                       autocapitalize="off" autocorrect="off" autocomplete="off"
+                       @bind-Value="Model.EnteredCaptchaText4"/>
+            <DntInputCaptcha @bind-Value="Model.CaptchaText4"
+                             Language="@NumberToWordLanguage.English"
+                             DisplayMode="@DisplayMode.SumOfTwoNumbersToWords"
+                             AllowThousandsSeparators="false"
+                             Max="20"
+                             Min="1"
+                             AbsoluteExpiration="@TimeSpan.FromMinutes(2)"
+                             ShowRefreshButton="true"
+                             FontSize="21"
+                             FontName="Times New Roman"
+                             FontColor="#603F83FF"
+                             BackgroundColor="#FCF6F5FF"
+                             RandomLinesCount="2"
+                             RandomCirclesCount="6"
+                             BorderWidth="0.3"
+                             BorderColor="grey"
+                             NoisePointsCount="25"
+                             Padding="11"
+                             ShadowBlur="7"
+                             ShadowColor="navy"
+                             ShadowOffsetX="-3"
+                             ShadowOffsetY="-3"
+                             TimerInterval="@TimeSpan.FromMilliseconds(2500)"
+                             CaptchaCanvasClass=""
+                             CaptchaDivClass="d-flex justify-content-center align-self-center ms-1"
+                             RefreshButtonClass="bi-arrow-repeat btn-lg"
+                             RefreshButtonTitle="Refresh"/>
+        </div>
+        <ValidationMessage For="@(() => Model.EnteredCaptchaText4)"/>
+    </div>
+</div>
+
+<button type="submit" class="btn btn-primary btn-lg">Submit</button>
+</EditForm>

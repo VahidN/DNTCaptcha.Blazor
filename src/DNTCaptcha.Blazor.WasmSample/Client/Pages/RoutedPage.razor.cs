@@ -8,15 +8,4 @@ namespace DNTCaptcha.Blazor.WasmSample.Client.Pages;
 
 public partial class RoutedPage : ComponentBase
 {
-    private LoginViewModel Model { set; get; } = new();
-
-    private async Task DoLoginAsync()
-    {
-        await Task.Delay(500);
-        Console.WriteLine(JsonSerializer.Serialize(Model));
-
-        // Clear the form, Redraw the captcha
-        Model = new LoginViewModel();
-        Model.CaptchaText1 = string.Empty; // How to redraw the captcha
-    }
 }
