@@ -26,6 +26,7 @@ dotnet_diagnostic.CA2007.severity = none
 dotnet_diagnostic.RCS1090.severity = none
 
 dotnet_diagnostic.MA0002.severity = suggestion
+dotnet_diagnostic.BL0007.severity = suggestion
 
 #logging
 dotnet_diagnostic.CA1848.severity = suggestion
