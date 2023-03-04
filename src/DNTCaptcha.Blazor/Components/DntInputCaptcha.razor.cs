@@ -232,13 +232,21 @@ public partial class DntInputCaptcha : ComponentBase, IDisposable, IAsyncDisposa
     /// </summary>
     public async ValueTask DisposeAsync()
     {
-        if (_scriptModule is not null)
+        try
         {
-            await _scriptModule.DisposeAsync();
-            _scriptModule = null;
-        }
+            if (_scriptModule is not null)
+            {
+                await _scriptModule.DisposeAsync();
+                _scriptModule = null;
+            }
 
-        GC.SuppressFinalize(this);
+            GC.SuppressFinalize(this);
+        }
+        catch (JSDisconnectedException)
+        {
+            // Ignore it. It is impossible to call JavaScript when the SignalR connection is disconnected.
+            // Since event listeners stop existing after a page reload there are no memory leaks.
+        }
     }
 
     /// <summary>
