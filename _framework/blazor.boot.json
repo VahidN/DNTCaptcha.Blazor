@@ -7,8 +7,8 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "DNTCaptcha.Blazor.dll": "sha256-PR7Saz3bDBiOGmLt4CjMtN0fRuypM64Jqlkf8e7OzT8=",
-      "DNTCaptcha.Blazor.WasmSample.Client.dll": "sha256-kw6zeYI1\/SGcZz2mo2J76csyCLIsRInu9kFFXfd+RWo=",
+      "DNTCaptcha.Blazor.dll": "sha256-Rzw+b6dt2JUJfpJOQcWalh8HFUTOHm2XT98ahLuTchE=",
+      "DNTCaptcha.Blazor.WasmSample.Client.dll": "sha256-MN5pB65uCdtgfXEbXe1Y02fwyrEN3NeYa\/mdbfGezkY=",
       "DNTCaptcha.Blazor.WasmSample.Shared.dll": "sha256-ROsepN6rXOXRRsYGEbwwDbD5GERyCWn6u0sq2dcsFh0=",
       "Microsoft.AspNetCore.Components.dll": "sha256-eMP3uIKAguA03dOz9r9pNP740qcLeGuo5NMPvvtZu+Y=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-k5qacs9b+rCB5jw0E1bl3yVmJZso1x\/yuBJnkklMc4c=",
