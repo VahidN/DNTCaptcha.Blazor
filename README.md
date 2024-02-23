@@ -56,7 +56,7 @@ To add a new language, kindly contribute by editing the following files:
 
 ## Samples
 
-![DNTCaptcha.Blazor](https://github.com/VahidN/DNTCaptcha.Blazor/tree/main/src/DNTCaptcha.Blazor.WasmSample/DntInputCaptcha.png)
+![DNTCaptcha.Blazor](https://raw.githubusercontent.com/VahidN/DNTCaptcha.Blazor/main/src/DNTCaptcha.Blazor.WasmSample/DntInputCaptcha.png)
 
 - [Blazor WASM Sample](https://github.com/VahidN/DNTCaptcha.Blazor/tree/main/src/DNTCaptcha.Blazor.WasmSample/)
 - [Blazor Server Sample](https://github.com/VahidN/DNTCaptcha.Blazor/tree/main/src/DNTCaptcha.Blazor.ServerSample/)
