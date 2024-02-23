@@ -204,10 +204,10 @@ public partial class DntInputCaptcha : ComponentBase, IDisposable, IAsyncDisposa
     public int Min { set; get; } = 1;
 
     /// <summary>
-    ///     The refresh-button-class of the captcha. It's default value is `bi-arrow-repeat btn-lg`.
+    ///     The refresh-button-class of the captcha. It's default value is `bi-arrow-repeat btn`.
     /// </summary>
     [Parameter]
-    public string RefreshButtonClass { set; get; } = "bi-arrow-repeat btn-lg";
+    public string RefreshButtonClass { set; get; } = "bi-arrow-repeat btn";
 
     /// <summary>
     ///     The title of refresh-button of the captcha. It's default value is `refresh`.
@@ -220,6 +220,12 @@ public partial class DntInputCaptcha : ComponentBase, IDisposable, IAsyncDisposa
     /// </summary>
     [Parameter]
     public bool ShowRefreshButton { set; get; } = true;
+
+    /// <summary>
+    /// Child content rendered inside the button
+    /// </summary>
+    [Parameter] 
+    public RenderFragment? RefreshButtonChildContent { get; set; }
 
     /// <summary>
     ///     Represents an instance of a JavaScript runtime to which calls may be dispatched.

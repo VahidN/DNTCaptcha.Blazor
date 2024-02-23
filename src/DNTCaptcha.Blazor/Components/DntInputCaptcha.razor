@@ -10,10 +10,11 @@
     </canvas>
     @if (ShowRefreshButton)
     {
-        <a class="@RefreshButtonClass"
-           title="@RefreshButtonTitle"
-           style="cursor: pointer;"
+        <button class="@RefreshButtonClass"
+           type="button"
+           title="@RefreshButtonTitle"           
            @onclick="@(() => ShowCaptchaAsync())">
-        </a>
+           @RefreshButtonChildContent
+        </button>
     }
 </div>

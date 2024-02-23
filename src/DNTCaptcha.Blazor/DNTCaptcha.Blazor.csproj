@@ -3,7 +3,7 @@
     <TargetFrameworks>net7.0;net6.0;</TargetFrameworks>
     <BlazorLinkOnBuild Condition="'$(Configuration)'!='Release'">false</BlazorLinkOnBuild>
     <Description>A captcha component for the Blazor apps</Description>
-    <VersionPrefix>1.1.4</VersionPrefix>
+    <VersionPrefix>1.2.0</VersionPrefix>
     <Authors>Vahid Nasiri</Authors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>DNTCaptcha.Blazor</AssemblyName>
@@ -40,6 +40,7 @@
     <Features>strict</Features>
     <ReportAnalyzer>true</ReportAnalyzer>
     <NoWarn>NU5104;</NoWarn>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Meziantou.Analyzer" Version="2.0.19">
@@ -74,6 +75,7 @@
 
   <ItemGroup>
     <Content Remove="tsconfig.json" />
+    <None Include="../../README.md" Link="README.md" Pack="true" PackagePath="/" Visible="false" />
   </ItemGroup>
 
   <ItemGroup>
