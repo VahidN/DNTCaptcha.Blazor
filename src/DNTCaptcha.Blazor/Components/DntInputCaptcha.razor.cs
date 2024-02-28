@@ -10,7 +10,7 @@ namespace DNTCaptcha.Blazor;
 
 /// <summary>
 ///     A custom captcha component. 
-///     This is an interactive (Server & WebAssembly) captcha component and can't be used with the Blazor SSR.
+///     This is an interactive (Server and WebAssembly) captcha component and can't be used with the Blazor SSR.
 /// </summary>
 public partial class DntInputCaptcha : ComponentBase, IDisposable, IAsyncDisposable
 {
