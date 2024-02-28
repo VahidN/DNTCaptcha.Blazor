@@ -2,7 +2,7 @@
 
 [![DNTCaptcha.Blazor](https://github.com/VahidN/DNTCaptcha.Blazor/workflows/.NET%20Core%20Build/badge.svg)](https://github.com/VahidN/DNTCaptcha.Blazor)
 
-`DNTCaptcha.Blazor` is a captcha generator for the Blazor based applications. It uses the standard [HTML5 Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) to draw the captcha and that's why it's compatible with both Blazor WASM and Server apps. It no longer uses the `System.Drawing.Common` package which has serious cross platform and stability issues.
+`DNTCaptcha.Blazor` is a captcha generator for the `interactive` Blazor based applications. It uses the standard [HTML5 Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) to draw the captcha and that's why it's compatible with both `interactive` (not SSR!) Blazor WASM and Server apps. It no longer uses the `System.Drawing.Common` package which has serious cross platform and stability issues.
 
 ## Install via NuGet
 
