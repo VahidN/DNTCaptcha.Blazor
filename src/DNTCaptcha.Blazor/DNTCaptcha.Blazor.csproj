@@ -3,7 +3,7 @@
     <TargetFrameworks>net8.0;net7.0;net6.0;</TargetFrameworks>
     <BlazorLinkOnBuild Condition="'$(Configuration)'!='Release'">false</BlazorLinkOnBuild>
     <Description>A captcha component for the Blazor apps</Description>
-    <VersionPrefix>1.2.1</VersionPrefix>
+    <VersionPrefix>1.2.2</VersionPrefix>
     <Authors>Vahid Nasiri</Authors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>DNTCaptcha.Blazor</AssemblyName>
