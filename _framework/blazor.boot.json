@@ -1,7 +1,7 @@
 {
   "entryAssembly": "DNTCaptcha.Blazor.WasmSample.Client",
   "resources": {
-    "hash": "sha256-0oleEq/pHQzMrpHW/celQAjpw5iBVrT4shfr7Xd7ivU=",
+    "hash": "sha256-TjjsLDdkcBRR3lieBriA5BWNWAhp+ZdVDGeG6Xm+/SQ=",
     "runtime": {
       "dotnet.7.0.18.yczjibhkds.js": "sha256-lsqy0PQ8nf1/0sSlLGe3Kfwi8V0Q1QzVy5+AqtJ3cfU=",
       "dotnet.timezones.blat": "sha256-aPcvvHoFVwCzeRxTOvMTcrI2l2HKJO0sjSN7IF10LUQ=",
@@ -11,9 +11,9 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "DNTCaptcha.Blazor.dll": "sha256-wsJNvbK3neY76gNLEE25JmMv0tpR2BeP2N8TVZeUi1Y=",
-      "DNTCaptcha.Blazor.WasmSample.Client.dll": "sha256-OGwOhIQNtgzS5Yotyl1pAjuR+ZvUK334/vPHyt6VaLE=",
-      "DNTCaptcha.Blazor.WasmSample.Shared.dll": "sha256-wRGDf6XrXNgL3rTo1ppK6VAT/59S4CnWOESKsXRFvK4=",
+      "DNTCaptcha.Blazor.dll": "sha256-wn3DNS2xrHyzp5SFp7jGKjnVtBpZKVkGoy0BTukdYNM=",
+      "DNTCaptcha.Blazor.WasmSample.Client.dll": "sha256-JgZ5/yYC8TSVJgfMXg6yWQXkJRa1aOadHdsYL+xCHk4=",
+      "DNTCaptcha.Blazor.WasmSample.Shared.dll": "sha256-qyH25hnWIm2Jedp8VrDhfeKit6JastmgnjNIY8QVahk=",
       "Microsoft.AspNetCore.Components.dll": "sha256-9FDx/b3eMYCYtGxyorSY5uHpjhvc1tKDN+DLygepOw4=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-zHOa9JknoqWR3oGvHoiYiRGwCbypPyT9fJ++CBnls3s=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-6W9EMlD63ADS/aNkmLXr7fftKptyh+LJ1SuOERJN7Dk=",
