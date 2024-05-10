@@ -69,6 +69,10 @@ public enum NumberToWordLanguage
     /// <summary>
     ///     Dutch Language
     /// </summary>
-    Dutch
+    Dutch,
 
+    /// <summary>
+    ///     Azerbaijan Language
+    /// </summary>
+    Azerbaijani
 }
