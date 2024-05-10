@@ -65,4 +65,10 @@ public enum NumberToWordLanguage
     ///     German Language
     /// </summary>
     German,
+
+    /// <summary>
+    ///     Dutch Language
+    /// </summary>
+    Dutch
+
 }

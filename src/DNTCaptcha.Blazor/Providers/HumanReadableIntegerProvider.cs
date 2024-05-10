@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace DNTCaptcha.Blazor;
@@ -7,7 +7,7 @@ namespace DNTCaptcha.Blazor;
 /// Convert a number into words
 /// </summary>
 public class HumanReadableIntegerProvider : ICaptchaTextProvider
-{  
+{
     private readonly IDictionary<NumberToWordLanguage, string> _and = new Dictionary<NumberToWordLanguage, string>
                                                                       {
                                                                           { NumberToWordLanguage.English, " " },
@@ -21,7 +21,8 @@ public class HumanReadableIntegerProvider : ICaptchaTextProvider
                                                                           { NumberToWordLanguage.Spanish, " " },
                                                                           { NumberToWordLanguage.Portuguese, " " },
                                                                           { NumberToWordLanguage.French, " et " },
-                                                                          { NumberToWordLanguage.German, " und " }
+                                                                          { NumberToWordLanguage.German, " und " },
+                                                                          { NumberToWordLanguage.Dutch, " en " }
                                                                       };
 
     private readonly IList<NumberWord> _numberWords = new List<NumberWord>
@@ -50,6 +51,8 @@ public class HumanReadableIntegerProvider : ICaptchaTextProvider
                                                                              new List<string> { string.Empty, "Un", "Deux", "Trois", "Quatre", "Cinq", "Six", "Sept", "Huit", "Neuf" }},
                                                           new NumberWord { Group= DigitGroup.Ones, Language= NumberToWordLanguage.German, Names=
                                                                              new List<string> { string.Empty, "Eins", "Zwei", "Drei", "Vier", "Fünf", "Sechs", "Sieben", "Acht", "Neun" }},
+                                                          new NumberWord { Group= DigitGroup.Ones, Language= NumberToWordLanguage.Dutch, Names=
+                                                                             new List<string> { string.Empty, "Een", "Twee", "Drie", "Vier", "Vijf", "Zes", "Zeven", "Acht", "Negen"}},
 
                                                           new NumberWord { Group= DigitGroup.Teens, Language= NumberToWordLanguage.English, Names=
                                                                              new List<string> { "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen" }},
@@ -75,6 +78,9 @@ public class HumanReadableIntegerProvider : ICaptchaTextProvider
                                                                              new List<string> { "Dix", "Onze", "Douze", "Treize", "Quatorze", "Quinze", "Seize", "Dix-sept", "Dix-huit", "Dix-neuf" }},
                                                           new NumberWord { Group= DigitGroup.Teens, Language= NumberToWordLanguage.German, Names=
                                                                              new List<string> { "Zehn", "Elf", "Zwölf", "Dreizehn", "Vierzehn", "Fünfzehn", "Sechzehn", "Siebzehn", "Achtzehn", "Neunzehn" }},
+                                                          new NumberWord { Group = DigitGroup.Teens, Language = NumberToWordLanguage.Dutch, Names =
+                                                                             new List<string> { "Tien", "Elf", "Twaalf", "Dertien", "Veertien", "Vijftien", "Zestien", "Zeventien", "Achttien", "Negentien" }},
+
 
                                                           new NumberWord { Group= DigitGroup.Tens, Language= NumberToWordLanguage.English, Names=
                                                                              new List<string> { "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety" }},
@@ -100,7 +106,8 @@ public class HumanReadableIntegerProvider : ICaptchaTextProvider
                                                                              new List<string> { "Vingt", "Trente", "Quarante", "Cinquante", "Soixante", "Soixante-dix", "Quatre-vingts", "Quatre-vingt-dix" }},
                                                           new NumberWord { Group= DigitGroup.Tens, Language= NumberToWordLanguage.German, Names=
                                                                              new List<string> { "Zwanzig", "Dreißig", "Vierzig", "Fünfzig", "Sechzig", "Siebzig", "Achtzig", "Neunzig" }},
-
+                                                          new NumberWord { Group = DigitGroup.Tens, Language = NumberToWordLanguage.Dutch, Names =
+                                                                             new List<string> { "Twintig", "Dertig", "Veertig", "Vijftig", "Zestig", "Zeventig", "Tachtig", "Negentig" }},
 
                                                           new NumberWord { Group= DigitGroup.Hundreds, Language= NumberToWordLanguage.English, Names=
                                                                              new List<string> {string.Empty, "One Hundred", "Two Hundred", "Three Hundred", "Four Hundred",
@@ -133,6 +140,9 @@ public class HumanReadableIntegerProvider : ICaptchaTextProvider
                                                           new NumberWord { Group= DigitGroup.Hundreds, Language= NumberToWordLanguage.German, Names=
                                                                              new List<string> {string.Empty, "Einhundert", "Zweihundert", "Dreihundert", "Vierhundert",
                                                                                  "Fünfhundert", "Sechshundert", "Siebenhundert", "Achthundert", "Neunhundert" }},
+                                                          new NumberWord { Group = DigitGroup.Hundreds, Language = NumberToWordLanguage.Dutch, Names =
+                                                                             new List<string> { string.Empty, "Honderd", "Tweehonderd", "Driehonderd", "Vierhonderd",
+                                                                                 "Vijfhonderd", "Zeshonderd", "Zevenhonderd", "Achthonderd", "Negenhonderd" }},
 
                                                           new NumberWord { Group= DigitGroup.Thousands, Language= NumberToWordLanguage.English, Names=
                                                                              new List<string> { string.Empty, " Thousand", " Million", " Billion"," Trillion", " Quadrillion", " Quintillion", " Sextillian",
@@ -211,6 +221,12 @@ public class HumanReadableIntegerProvider : ICaptchaTextProvider
                                                                                  " Septilliarde", " Octillion", " Octilliarde", " Nonillion", " Nonilliarde", " Decillion",
                                                                                  " Decilliarde", " Undecillion", " Undecilliarde", " Duodecillion", " Duodecilliarde", " Tredecillion", " Tredecilliarde", " Quattuordecillion", " Quattuordecilliarde",
                                                                                  " Quindecillion", " Quindecilliarde", " Sexdecillion", " Sexdecilliarde", " Septendecillion" }},
+                                                          new NumberWord { Group = DigitGroup.Thousands, Language = NumberToWordLanguage.Dutch, Names =
+                                                                             new List<string> { string.Empty, "Duizend", "Miljoen", "Miljard", "Biljoen", "Biljard", "Triljoen", "Triljard",
+                                                                                 "Quadriljoen", "Quadriljard", "Quintiljoen", "Quintiljard", "Sextiljoen", "Sextiljard", "Septiljoen",
+                                                                                 "Septiljard", "Octiljoen", "Octiljard", "Noniljoen", "Noniljard", "Deciljoen",
+                                                                                 "Deciljard", "Undeciljoen", "Undeciljard", "Duodeciljoen", "Duodeciljard", "Tredeciljoen", "Tredeciljard", "Quattuordeciljoen", "Quattuordeciljard",
+                                                                                 "Quindeciljoen", "Quindeciljard", "Sexdeciljoen", "Sexdeciljard", "Septendeciljoen" }},
                                                       };
 
     private readonly IDictionary<NumberToWordLanguage, string> _negative = new Dictionary<NumberToWordLanguage, string>
@@ -226,7 +242,8 @@ public class HumanReadableIntegerProvider : ICaptchaTextProvider
                                                                                { NumberToWordLanguage.Spanish, "Negativo" },
                                                                                { NumberToWordLanguage.Portuguese, "Negativo" },
                                                                                { NumberToWordLanguage.French, "Négatif" },
-                                                                               { NumberToWordLanguage.German, "Negativ" }
+                                                                               { NumberToWordLanguage.German, "Negativ" },
+                                                                               { NumberToWordLanguage.Dutch, "Negatief" }
                                                                            };
 
     private readonly IDictionary<NumberToWordLanguage, string> _zero = new Dictionary<NumberToWordLanguage, string>
@@ -242,7 +259,8 @@ public class HumanReadableIntegerProvider : ICaptchaTextProvider
                                                                            { NumberToWordLanguage.Spanish, "Cero" },
                                                                            { NumberToWordLanguage.Portuguese, "Zero" },
                                                                            { NumberToWordLanguage.French, "Zéro" },
-                                                                           { NumberToWordLanguage.German, "Null" }
+                                                                           { NumberToWordLanguage.German, "Null" },
+                                                                           { NumberToWordLanguage.Dutch, "Nul" }
                                                                        };
 
     /// <summary>
